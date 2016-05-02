@@ -1,0 +1,497 @@
+@charset "utf-8";
+
+html {
+    background-color: #333;
+}
+
+body, html {
+	min-width: 70em;
+    /*width: 100%;*/
+	min-height: 100%;
+    margin: 0 auto;
+	font-family: 'Futura', sans-serif;
+	cursor: default;
+    background-image: url(../bg/bg.jpg);
+}
+
+.gradientBlue {
+    background: #049CDB; /* ancient technology */
+    background: -khtml-gradient(linear, left top, left bottom, from(#049CDB), to(#0064CD));
+    background: -moz-linear-gradient(top, #049CDB, #0064CD);
+    background: -ms-linear-gradient(top, #049CDB, #0064CD);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049CDB), color-stop(100%, #0064CD));
+    background: -webkit-linear-gradient(top, #049CDB, #0064CD);
+    background: -o-linear-gradient(top, #049CDB, #0064CD);
+    background: linear-gradient(top, #049CDB, #0064CD);
+}
+
+.gradientBlack {
+    
+
+    background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+.gradientGray {
+    background: #c0c0c0; /* ancient technology */
+    background: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#c0c0c0));
+    background: -moz-linear-gradient(top, #eeeeee, #c0c0c0);
+    background: -ms-linear-gradient(top, #eeeeee, #c0c0c0);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #c0c0c0));
+    background: -webkit-linear-gradient(top, #eeeeee, #c0c0c0);
+    background: -o-linear-gradient(top, #eeeeee, #c0c0c0);
+    background: linear-gradient(top, #eeeeee, #c0c0c0);
+}
+
+div.launchesLoading {
+    margin: 2em 5px 5px 5px;
+    width: 20em;
+    height: 5em;
+    color: bisque;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 5em;
+    background-image: url(../bg/lbg2.png);
+}
+
+div.footer {
+    padding: 5px;
+    margin: 0 auto;
+    width: 99%;
+    min-height: 2em;
+    color: bisque;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.topBar {
+    z-index: 9001;
+    max-height: 30px;
+    width: 100%;
+    line-height: 30px;
+    box-shadow: 0 0 5px #000;
+    color: bisque;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+span.pageTitle {
+    font-size: 25px;
+    line-height: 30px;
+    text-shadow: 0 0 5px #000;  
+}
+
+div.container {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 0 auto;
+    clear: both;
+}
+
+div.titleAndStatus {
+    width: auto;
+    padding-left: 5px;
+}
+
+div.pageControls img.loadIndicator {
+    float: left;
+    width: 15px;
+    height: 15px;
+    padding-top: 8px;
+    padding-right: 5px;
+    text-shadow: 0 0 5px #000;
+}
+
+div.pageControls {
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    /*float: right;*/
+    text-align: right;
+}
+
+.controlButton {
+    min-width: 30px;
+    max-width: 165px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    line-height: 32px;
+    /*color: #fff;*/
+    text-shadow: 0 0 5px #000;
+}
+
+.historyButton {
+    min-width: 155px;
+    overflow: hidden;
+}
+
+.betaButton {
+    font-style: italic;
+}
+
+i.playPause {
+    line-height: 31px;
+    padding: 0;
+}
+
+.controlButton {
+    padding: 0 5px 0px 5px;
+}
+
+.betaButton a {
+    text-decoration: none;
+}
+
+span.updateTimer {
+    color: crimson;
+    margin-right: 5px;
+    font-size: 15px;
+    line-height: 32px;
+    text-shadow: 0 0 5px #000;
+    width: 2.25em;
+    max-width: 2.26em;
+    text-align: left;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+/*i.controlButton:hover {
+    background: #414345; /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to top, #414345 , #232526); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to top, #414345 , #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*}*/
+
+
+div.searchHugger {
+    float: left;
+    background: #fff;
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+input[type=text].searchBox {
+    height: 15px;
+    border: none;
+    padding: 5px 5px 5px 5px;
+    vertical-align: middle;
+    margin-left: 7px;
+    width: 180px;
+}
+
+i.searchClear {
+    padding-right: 5px;
+    margin-left: -6px;
+    cursor: pointer;
+    color: #777;
+}
+
+/* Options "GUI" */
+
+div.optionsPane {
+    background-color: #777;
+    color: #fff;
+    padding: 35px 5px 5px 5px;
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    position: fixed;
+    left: 50%;
+    margin-left: -400px;
+    top: 0;
+    display: none;
+    z-index: 9000;
+}
+
+i.optionsClose {
+    float: right;
+    cursor: pointer;
+}
+
+div.optionsPanelFooter {
+    display: block; /* Totally useless on a div! */
+}
+
+span.optionsTagLine {
+    display: inline-block;
+    text-align: left;
+    font-size: 12px;
+    width: 49%
+}
+
+/*span.versionString {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    float: right;
+    padding-top: 2px;
+    min-width: 50%;
+}*/
+
+input.optionCheck, input.optionCheck + label {
+    cursor: pointer;
+}
+
+/* Launches stuff */
+
+div.showMore {
+    text-align: center;
+    background-color: #434343;
+    background-image: url(../bg/lbg2.png);
+    max-width: 51.575em;
+    padding: 0.3125em;
+    width: 51.575em;
+    font-size: 1.25em;
+    color: bisque;
+    margin: 1em auto;
+    display: none;
+}
+
+.hoverable {
+    cursor: help;
+}
+
+div.launch span.tag:first-child {
+    margin-left: 0.5em;
+}
+
+div.launch span.tag {
+    font-size: 0.5em;
+    vertical-align: top;
+    padding: 0.3em;
+    border-radius: 5px;
+    background-color: bisque;
+    color: #000;
+    margin-left: 0.1em;
+    border: 1px solid #000;
+    line-height: 0.7em;
+    max-height: 0.7em;
+}
+
+div.launch span.tag[data-title="ISS Resupply"] {
+    background-color: #CFF09E;
+}
+
+div.launch span.tag[data-title="Barge landing"] {
+    background-color: #1C6BA0;
+}
+
+div.launch span.tag[data-title="Manned flight"] {
+    /*background-color: #eebb99;*/
+    background: #eebb99; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eebb99, #8B4513); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eebb99, #8B4513); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera */
+}
+
+div.launches.single {
+    margin: 0 0;
+    padding: 0;
+}
+
+div.launches:not(.single) {
+    flex: 0;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 100%;
+}
+
+div.launch { 
+
+    background-color: #434343;
+    background-image: url(../bg/lbg2.png);
+    max-width: 73.3em;
+    padding: 0.3125em;
+    width: /*70%*/73.25em;
+    font-size: 1.25em;
+    color: bisque
+    
+}
+
+div.launchesRow {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 0;
+    min-width: 65.25em;
+    width: 65.25em;
+    margin: 0 auto;
+}
+
+div.launch.small {
+    min-width: 25em;
+    max-width: 25em;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+div.launch {
+    margin-top: 1.25em;
+}
+
+div.launch.featured
+{
+    font-size: 2em;
+    width: 32em;
+    min-width: 10em;
+    max-width: 32em;
+    margin: 1em auto 0 auto;
+}
+
+div.launch.featured.single {
+    margin: 0 auto 0 auto;
+}
+
+div.launch span[class^='rocket'] {
+    
+    color: crimson;
+    flex: 1;
+    -webkit-flex: 1;
+    text-overflow: ellipsis;
+    display: flex;
+    display: -webkit-flex;
+    
+}
+div.launch span[class^='payload'] {
+    
+    color: crimson;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: right;
+    text-overflow: ellipsis;
+    
+}
+
+div.bottom, div.top {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    word-wrap: normal;
+    white-space: nowrap;
+    max-height: 1.4375em;
+    text-overflow: ellipsis;
+}
+
+div.right {
+    
+    display: inline-block;
+    text-align: right;
+    flex: 1;
+    -webkit-flex: 1;
+    min-width: 10em;
+    
+}
+div.left {
+    
+    display: inline-block;
+    flex: 1;
+    -webkit-flex: 1;
+    vertical-align: middle;
+    text-align: left;
+    
+}
+
+div.launch span[class^='countdown'] {
+    display: block;
+}
+
+div.footer {
+    margin-top: 1em;
+    display: block;
+    font-size: 0.75em;
+}
+
+a.github {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+div.flextest {
+    min-height: 70px;
+    display:inline-flex;
+    margin: 0 auto;
+    max-width: 90%;
+    justify-content: space-between;
+}
+
+div.flextest div {
+    flex: 1;
+    -webkit-flex: 1;
+    max-width: 16.7em;
+    min-width: 16.7em;
+}
+
+div[class^='launch'].net {
+    opacity: 0.5;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    -webkit-backface-visibility: hidden; /* Fix font shifting slight after opacity animation reaches 1.0 */
+}
+
+div.launch span.launch-NET, div.launch span.launch-DST, div.launch span.launch-WindowTimer {
+    border-bottom: 1px dotted;
+    border-color: inherit;
+    cursor: help;
+}
+
+div[class^='launch'].net:hover {
+    opacity: 1;
+}
+
+a, .fakeLink {
+    cursor: pointer;
+    color: bisque;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+a:hover, .fakeLink:hover {
+    color: crimson;
+}
+
+div.launchNotification {
+    min-width: 64em;
+    max-width: 64em;
+    margin: 2em auto 0 auto;
+    text-align: center;
+    clear: both;
+    padding: 0.5em;
+    background: pink;
+    border: 3px solid red;
+    color: black;
+    display: none;
+}
+
+a.updateNotification {
+    text-decoration: none;
+    margin-top: 2em;
+}
+
+div.updateNotification { 
+    min-width: 40em;
+    max-width: 60em;
+    margin: 2em auto 0 auto;
+    text-align: center;
+    clear: both;
+    border: 3px solid;
+    background-color: #f1f9f7;
+    border-color: #e0f1e9;
+    color: #1d9d74;
+    padding: 0.5em;
+    display: none;
+}
